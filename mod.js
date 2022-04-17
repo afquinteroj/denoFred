@@ -1,6 +1,5 @@
 export class FREDPull {
-    baseURL = 'https://api.stlouisfed.org/fred/'
-    seriesURL = 'series/observations?series_id=';
+    seriesURL = 'https://api.stlouisfed.org/fred/series/observations?series_id=';
     argsUrl;
     apiKey;
     url;
@@ -39,7 +38,7 @@ export class FREDPull {
 
     set setKey(apiValue) {
         this.apiKey = '&api_key='.concat(apiValue);
-        this.url = this.baseURL.concat(this.seriesURL, this.series, this.argsUrl, this.apiKey);
+        this.url = this.seriesURL.concat(this.series, this.argsUrl, this.apiKey);
     };
 
     async fetchData() {
