@@ -29,6 +29,7 @@ const options = {
 
 const spData = new FREDPull('SP500', options);
 ```
+Learn more about options here: https://fred.stlouisfed.org/docs/api/fred/category_series.html
 
 ## Set your API Key
 Create a FRED account and get your API key from: https://fred.stlouisfed.org/docs/api/api_key.html
