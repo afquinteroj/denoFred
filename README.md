@@ -43,5 +43,6 @@ spData.setKey = 'yourAPIkey';
 ```
 const spResult = await spData.fetchData();
 ```
+Note for the txt and xls file types, spResult will return a promise and you will need to extract the data. Will work on better support in the future.
 
 More to come :)
