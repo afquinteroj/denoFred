@@ -1,4 +1,4 @@
-export default class FREDPull {
+export class FREDPull {
     baseURL = 'https://api.stlouisfed.org/fred/series/observations?series_id=';
     argsUrl;
     apiKey;
