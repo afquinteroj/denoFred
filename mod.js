@@ -6,7 +6,7 @@ export class FREDPull {
 
     constructor(series, options_obj) {
         this.series = series;
-        this.options = typeof options_obj === 'undefined' ? '' : options_obj
+        this.options = typeof options_obj === 'undefined' ? '': options_obj
 
         this.checkSeries = function() {
             try {
@@ -56,18 +56,16 @@ export class FREDPull {
                 case 'json':
                     data = await res.json();
                     break;
-                case 'undefined':
-                case 'xml':
-                    data = await res.text();
-                    break;
                 case 'txt':
                 case 'xls':
-                    data = res;
+                    data = res; // looking into how to parse txt and xls.
                     break;
-            }
+                default:
+                    data = await res.text();
+            };
             return data;
         } catch(err) {
             throw err;
         }
     };
-}
+};
