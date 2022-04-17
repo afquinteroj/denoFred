@@ -3,7 +3,7 @@ Deno module to connect to FRED API
 
 # How to use
 
-## Instantiate FRED object
+## Instantiate FRED object (S&P500 data example)
 ```
 const spData = new FREDPull('SP500');
 ```
