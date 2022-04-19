@@ -44,6 +44,6 @@ spData.setKey = 'yourAPIkey';
 ```
 const spResult = await spData.fetchData();
 ```
-Note for the txt and xls file types, spResult will return a promise and you will need to extract the data. Will work on better support in the future.
+Note for the txt and xls file types, ```spData.fetchData()``` will save a .zip file called fredData.zip. To modify the location and file name, add a third argument during class instantiation with the location and name of the file with the .zip extension.
 
 More to come :)
