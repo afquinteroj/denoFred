@@ -4,9 +4,10 @@ export class FREDPull {
     apiKey;
     url;
 
-    constructor(series, options_obj) {
+    constructor(series, options_obj, filename = 'fredData.zip') {
         this.series = series;
         this.options = typeof options_obj === 'undefined' ? '': options_obj
+        this.filename = filename;
 
         this.checkSeries = function() {
             try {
@@ -30,7 +31,6 @@ export class FREDPull {
                 
                 this.argsUrl = args;
             }
-            
         };
 
         this.setOptions();
@@ -39,6 +39,12 @@ export class FREDPull {
     set setKey(apiValue) {
         this.apiKey = '&api_key='.concat(apiValue);
         this.url = this.seriesURL.concat(this.series, this.argsUrl, this.apiKey);
+    };
+    
+    async processZIP(res) {
+        const buf = await res.arrayBuffer();
+        const data = new Uint8Array(buf);
+        await Deno.writeFile(this.filename, data);
     };
 
     async fetchData() {
@@ -58,7 +64,9 @@ export class FREDPull {
                     break;
                 case 'txt':
                 case 'xls':
-                    data = res; // looking into how to parse txt and xls.
+                    await this.processZIP(res)
+                    const file_loc = this.filename === '' ? 'Current working directory' : this.filename;
+                    data = `See ${file_loc} for zip file.`
                     break;
                 default:
                     data = await res.text();
