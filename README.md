@@ -48,7 +48,7 @@ See the Fred API documentation for more information: https://fred.stlouisfed.org
 
 Note for the txt and xls file types, ```fredObj.fetchSeriesObservations()``` will save a .zip file called fredData.zip. To modify the location and file name, add a third argument to the above method with the location and name of the file with the .zip extension. Also include the flag ```--allow-write``` to allow deno to write the file
 
-When running your script, be sure to set the ```--allow-net`` flag as follows:
+When running your script, be sure to set the ```--allow-net``` flag as follows:
 
 ```
 deno run --allow-net=api.stlouisfed.org
