@@ -2,8 +2,8 @@
 /*import CategoryFred from './lib/categoryFred.js'
 import ReleasesFred from './lib/releasesFred.js'*/
 import SeriesFred from './lib/seriesFred.js'
-/*import SourcesFred from './lib/sourcesFred.js'
-import TagsFred from './lib/tagsFred.js'*/
+/*import SourcesFred from './lib/sourcesFred.js'*/
+//import TagsFred from './lib/tagsFred.js'
 
 
 export {SeriesFred};
