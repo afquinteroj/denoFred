@@ -77,6 +77,17 @@ fredObj.fetchSeriesTags(series_id);
 fredObj.fetchSeriesUpdates(); // No mandatory arguments
 fredObj.fetchSeriesVintagedates(series_id);
 ```
+
+### Sources
+
+```
+const fredObj = new SourcesFred(FERD_KEY, options) // Instantiate Object
+fredObj.fetchSources() 
+
+```
+
+
+
 ### Tags
 
 ```
