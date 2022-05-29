@@ -84,6 +84,7 @@ fredObj.fetchSeriesVintagedates(series_id);
 const fredObj = new SourcesFred(FERD_KEY, options) // Instantiate Object
 fredObj.fetchSources() // No arguments
 fredObj.fetchSource(source_id) // pass a single string
+fredObj.fetchSourceReleases(source_id) // pass a single string
 
 ```
 
