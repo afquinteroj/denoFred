@@ -6,7 +6,7 @@ Deno module to connect to FRED API
 ## Instantiate FRED object (S&P500 data example) and pull data
 
 ```
-import {SeriesFred} from 'https://deno.land/x/denofred@v0.4.0/main.js'
+import {SeriesFred} from 'https://deno.land/x/denofred@v0.5.0/main.js'
 
 import {FRED_KEY} from './keys.js'
 
@@ -82,13 +82,11 @@ fredObj.fetchSeriesVintagedates(series_id);
 
 ```
 const fredObj = new SourcesFred(FERD_KEY, options) // Instantiate Object
+
 fredObj.fetchSources() // No arguments
 fredObj.fetchSource(source_id) // pass a single string
 fredObj.fetchSourceReleases(source_id) // pass a single string
-
 ```
-
-
 
 ### Tags
 
