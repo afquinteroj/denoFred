@@ -61,6 +61,20 @@ Create a FRED account and get your API key from: https://fred.stlouisfed.org/doc
 
 ## Methods
 
+## Categories
+
+```
+const fredObj = new CategoryFred(FRED_KEY, options) // Instantiate object
+
+fredObj.fetchCategory(category_id) // category_id is a single string
+fredObj.fetchCategoryChildren(category_id)
+fredObj.fetchCategoryRelated(category_id)
+fredObj.fetchCategorySeries(category_id)
+fredObj.fetchCategoryTags(category_id)
+fredObj.fetchCategoryRelatedTags(category_id, tag_names) // tag_names is an array of strings
+
+```
+
 ### Series
 
 ```
