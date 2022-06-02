@@ -82,7 +82,11 @@ fredObj.fetchReleases() // No arguments
 fredObj.fetchReleasesDates() // No arguments
 fredObj.fetchRelease(release_id) // release_id is a single string
 fredObj.fetchReleaseDates(release_id)
-```
+fredObj.fetchReleaseSeries(release_id)
+fredObj.fetchReleaseSources(release_id)
+fredObj.fetchReleaseTags(relesase_id)
+fredObj.fetchReleaseRelatedTags(release_id,tag_names) // tag_names is an array of strings
+```                                  
 
 ### Series
 
