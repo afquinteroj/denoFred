@@ -6,8 +6,7 @@ Deno module to connect to FRED API
 ## Instantiate FRED object (S&P500 data example) and pull data
 
 ```
-import {SeriesFred} from 'https://deno.land/x/denofred@v0.6.0/main.js'
-
+import {SeriesFred} from 'https://deno.land/x/denofred@v0.7.0/main.js'
 import {FRED_KEY} from './keys.js'
 
 const options = {
@@ -72,8 +71,22 @@ fredObj.fetchCategoryRelated(category_id)
 fredObj.fetchCategorySeries(category_id)
 fredObj.fetchCategoryTags(category_id)
 fredObj.fetchCategoryRelatedTags(category_id, tag_names) // tag_names is an array of strings
+```
+
+## Releases
 
 ```
+const fredObj = new ReleasesFred(FRED_KEY, options) // Instantiate Object
+
+fredObj.fetchReleases() // No arguments
+fredObj.fetchReleasesDates() // No arguments
+fredObj.fetchRelease(release_id) // release_id is a single string
+fredObj.fetchReleaseDates(release_id)
+fredObj.fetchReleaseSeries(release_id)
+fredObj.fetchReleaseSources(release_id)
+fredObj.fetchReleaseTags(relesase_id)
+fredObj.fetchReleaseRelatedTags(release_id,tag_names) // tag_names is an array of strings
+```                                  
 
 ### Series
 
@@ -110,7 +123,6 @@ const fredObj = new TagsFred(FRED_KEY, options) // Instantiate Object
 fredObj.fetchTags() // No mandatory arguments
 fredObj.fetchRelatedTags(tag_names) // array of strings.
 fredObj.fetchTagsSeries(tag_names)
-
 ```
 
 More to come :)
