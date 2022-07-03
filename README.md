@@ -126,5 +126,3 @@ fredObj.fetchTags() // No mandatory arguments
 fredObj.fetchRelatedTags(tag_names) // array of strings.
 fredObj.fetchTagsSeries(tag_names)
 ```
-
-More to come :)
