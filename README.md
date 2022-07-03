@@ -49,7 +49,7 @@ const options = {
 
 See the Fred API documentation for more information about requests and arguments: https://fred.stlouisfed.org/docs/api/fred
 
-Note for the txt and xls file types, ```fredObj.fetchSeriesObservations()``` will save a .zip file called fredData.zip. To modify the location and file name, add a third argument to the above method with the location and name of the file with the .zip extension. Also include the flag ```--allow-write``` to allow deno to write the file.
+Note for the txt and xls file types, ```fredObj.fetchSeriesObservations()``` will save a .zip file called fredData.zip. To modify the location and file name, add a second argument to the above method with the location and name of the file with the .zip extension. Also include the flag ```--allow-write``` to allow deno to write the file.
 
 When running your script, be sure to set the ```--allow-net``` flag as follows:
 
@@ -97,7 +97,7 @@ const fredObj = new SeriesFred(FRED_KEY, options) // Instantiate Object
 
 fredObj.fetchSeries(series_id); // series_id is a single string
 fredObj.fetchSeriesCategories(series_id);
-fredObj.fetchSeriesObservations(series_id);
+fredObj.fetchSeriesObservations(series_id, 'fredData.zip'); // second argument is optional. fredData.zip is default when saving zip files.
 fredObj.fetchSeriesRelease(series_id);
 fredObj.fetchSeriesSearch(text_obj); // text_obj is an array of strings
 fredObj.fetchSeriesSearchTags(text_obj);
