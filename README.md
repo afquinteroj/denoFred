@@ -1,12 +1,14 @@
 # denoFred
-Deno module to connect to FRED API
+Deno module to connect to FRED API.
+
+If you find this project helpful, consider making a donation to support this and future projects here via GitHub Sponsers: https://github.com/sponsors/aquinjay. 
 
 # How to use
 
 ## Instantiate FRED object (S&P500 data example) and pull data
 
 ```
-import {SeriesFred} from 'https://deno.land/x/denofred@v0.7.0/main.js'
+import {SeriesFred} from 'https://deno.land/x/denofred@v1.0.0/main.js'
 import {FRED_KEY} from './keys.js'
 
 const options = {
