@@ -1,7 +1,7 @@
 # denoFred
 Deno module to connect to FRED API.
 
-If you find this project helpful, consider making a donation to support this and future projects here via GitHub Sponsers: https://github.com/sponsors/aquinjay. 
+If you find this project helpful, consider staring this repo or making a donation to support this and future projects here via GitHub Sponsers: https://github.com/sponsors/aquinjay. 
 
 # How to use
 
